@@ -1,6 +1,7 @@
 let hHeight = $(window).height();
 let wWidth = $(window).width();
 let player = {};
+let orbs = [];
 
 let canvas = document.querySelector('#the-canvas');
 let context = canvas.getContext('2d');
@@ -20,7 +21,7 @@ $('.name-form').submit((event) => {
     document.querySelector('.player-name').innerHTML = player.name;
 })
 
-$('.start-game').click((event)=>{
+$('.start-game').click((event) => {
     $('.modal').modal('hide');
     $('.hiddenOnStart').removeAttr('hidden');
     init();
